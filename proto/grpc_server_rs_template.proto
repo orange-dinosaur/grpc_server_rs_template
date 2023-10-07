@@ -1,0 +1,14 @@
+syntax = "proto3";
+package grpc_server_rs_template;
+
+service GrpcServerRsTemplate {
+    // HealthCheck - Takes no arguments and returns a success bool
+    rpc HealthCheck(HealthCheckRequest) returns (HealthCheckResponse) {}
+}
+
+// HealthCheck
+message HealthCheckRequest {}
+
+message HealthCheckResponse {
+    bool success = 1;
+}

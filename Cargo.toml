@@ -1,0 +1,36 @@
+[package]
+name = "grpc_server_rs_template"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "grpc_server_rs_template"
+path = "src/main.rs"
+
+[dependencies]
+# Tokio dependencies
+tokio = { version = "1.32.0", features = ["macros", "rt-multi-thread"] }
+tokio-stream = { version = "0.1.14", features = ["net"] }
+
+# gRPC dependencies
+tonic = "0.10.2"
+tonic-reflection = "0.10.2"
+prost = "0.12.1"
+
+# Serde
+serde = { version = "1.0.186", features = ["derive"] }
+serde_json = "1.0.105"
+serde_with = "3.3.0"
+strum_macros = "0.25.2"
+
+# Tracing
+tracing = "0.1.37"
+tracing-subscriber = {version = "0.3.17", features = ["env-filter"]}
+
+[build-dependencies]
+tonic-build = "0.10.0"
