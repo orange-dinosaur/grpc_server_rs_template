@@ -50,7 +50,7 @@ pub async fn start() -> error::Result<()> {
     let addr: std::net::SocketAddr = "0.0.0.0:50051".parse()?;
     let grpc_server_rs_template = ServiceGrpcServerRsTemplate::new();
 
-    info!("Starting gRPC server on {}", addr);
+    info!("Starting gRPC server...");
 
     let reflection_service = tonic_reflection::server::Builder::configure()
         .register_encoded_file_descriptor_set(grpc_server_rs_template_proto::FILE_DESCRIPTOR_SET)
