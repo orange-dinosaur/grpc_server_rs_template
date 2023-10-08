@@ -1,0 +1,17 @@
+# Exclude build artifacts
+target/
+
+# Exclude tests
+tests/
+
+# Exclude version control files and directories
+.git/
+
+# Exclude env vars
+*.env*
+
+# Exclude compose files
+docker-compose.yml
+
+# Exclude IDE files
+.vscode/

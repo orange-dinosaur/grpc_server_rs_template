@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    grpc_server_rs_template:
+        image: grpc_server_rs_template:latest
+        container_name: grpc_server_rs_template
+        restart: unless-stopped
+        environment:
+            - ENVIRONMENT=development
+            - GRPC_AUTH_KEY=grpc_auth_key
+            - GRPC_AUTH_VALUE=grpc_auth_value
+        ports:
+            - '50027:50051'
