@@ -4,7 +4,7 @@ use tracing_subscriber::{EnvFilter, FmtSubscriber};
 use crate::config::config;
 
 pub fn initialize() {
-    let env_filter = EnvFilter::try_new("grpc_server_rs_template=trace")
+    let env_filter = EnvFilter::try_new("grpc_server_rs_template=debug")
         .unwrap_or_else(|_| EnvFilter::new("info"));
 
     let subscriber = FmtSubscriber::builder()

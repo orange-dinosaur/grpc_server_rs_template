@@ -80,7 +80,7 @@ fn get_env(name: &'static str) -> Result<String> {
 fn get_tracing_max_level(env: &Environment) -> Result<Level> {
     match env {
         Environment::Test => Ok(tracing::Level::TRACE),
-        Environment::Development => Ok(tracing::Level::TRACE),
+        Environment::Development => Ok(tracing::Level::DEBUG),
         Environment::Production => Ok(tracing::Level::INFO),
     }
 }
